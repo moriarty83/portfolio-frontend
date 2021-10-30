@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Header(props){
     const myTan = "#D8C3A5"
     const headerStyle={
-
+        paddingTop: "30px",
         backgroundColor: myTan,
         boxShadow: "0px 2px 4px black"
     }
@@ -19,16 +19,16 @@ function Header(props){
     return(
 
         <header style={headerStyle}>
-            <h1>My Portfolio Page</h1>
+            <h1 className="margin-0">My Portfolio Page</h1>
             <nav style={navStyle}>
                 <Link to="/">
-                    <div>HOME</div>
+                    <h3>HOME</h3>
                 </Link>
                 <Link to="/about">
-                    <div>ABOUT</div>
+                    <h3>ABOUT</h3>
                 </Link>
                 <Link to="/projects">
-                    <div>PROJECTS</div>
+                    <h3>PROJECTS</h3>
                 </Link>
             </nav>
         </header>

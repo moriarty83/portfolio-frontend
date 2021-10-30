@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import Slide from "../componenets/Slide";
+import Container from "../componenets/Container";
 
 
 function About(props){
@@ -21,10 +23,16 @@ function About(props){
 
     const loaded = ()=>{
         return(
-        <div>
+        <div className="flex row space-around">
+            <Container>
+            <img src={about.headshot} alt="Chris" />
+            </Container>
+            <Container>
             <h2>{about.name}</h2>
             <h3>{about.email}</h3>
+            
             <p>{about.bio}</p>
+            </Container>
         </div>)
     }
 
