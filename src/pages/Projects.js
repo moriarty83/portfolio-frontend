@@ -1,3 +1,7 @@
+import Button from "../componenets/Button";
+import Slide from "../componenets/Slide";
+import Thumbnail from "../componenets/Thumbnail";
+
 import { useState, useEffect } from "react";
 
 function Projects(props){
@@ -18,18 +22,28 @@ function Projects(props){
     useEffect(() => getProjectData(), []);
 
     const loaded = () =>{
-        return projects.map((project) =>(
-            <div>
-                <h1>{project.name}</h1>
-                <img src={project.image} alt="project image" />
-                <a href={project.git}>
-                    <button>Github</button>
-                </a>
-                <a href="{project.live">
-                    <button>Live Site</button>
-                </a>
+        const projectsElements = projects.map((project, index) =>{
+            return(
+                <Slide key={index}>
+                    <h3>{project.name}</h3>
+                    <Thumbnail src={project.image} />
+                    <div>
+                        <a href={project.git}>
+                        <Button primary>Github</Button>
+                        </a>
+                        <a href="{project.live">
+                            <Button>Live Site</Button>
+                        </a>
+                    </div>
+                </Slide>
+            )}
+        )
+
+        return (
+            <div className="flex row space-around width-90" >
+                {projectsElements}
             </div>
-        ))
+        )
     }
     return(
         projects ? loaded() : <h1>Loading ...</h1>
