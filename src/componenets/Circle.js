@@ -8,6 +8,8 @@ const Circle = styled.div`
   justify-content: center;
   align-items: center;
   transition: .75s;
+  border: 2px solid black;
+  z-index: -1;
 
   ${props =>
         props.peach &&

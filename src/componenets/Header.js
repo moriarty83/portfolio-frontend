@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 function Header(props){
     const myTan = "#D8C3A5"
     const headerStyle={
+        zIndex: "1",
         paddingTop: "30px",
         backgroundColor: myTan,
         boxShadow: "0px 2px 4px black"

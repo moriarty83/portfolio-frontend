@@ -1,7 +1,12 @@
-function Footer(props){
-    return(
-        <h1>Footer</h1>
-    )
-}
+import styled, { css }from 'styled-components'
+
+const Footer = styled.div`
+    background-color: #D8C3a5;
+    padding: 30px;
+    box-shadow: 0px -2px 4px gray;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+`
 
 export default Footer;

@@ -28,7 +28,7 @@ function App() {
           <About URL={URL} />
         </Route>
       </Switch>
-      <Footer />
+      <Footer>Page By C. Marshall Moriarty</Footer>
 
     </div>
   );
