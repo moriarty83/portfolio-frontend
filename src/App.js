@@ -12,7 +12,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 
 function App() {
-  const URL = "http://localhost:4000/";
+  const URL = "https://portfolio-lab.herokuapp.com/";
 
   return (
     <div className="App">
@@ -22,10 +22,10 @@ function App() {
           <Home />
         </Route>
         <Route path="/projects">
-          <Projects />
+          <Projects URL={URL}/>
         </Route>
-        <Route exact path="/about">
-          <About />
+        <Route path="/about">
+          <About URL={URL} />
         </Route>
       </Switch>
       <Footer />
