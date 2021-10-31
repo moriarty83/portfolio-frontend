@@ -5,7 +5,7 @@ const Footer = styled.div`
     padding: 30px;
     box-shadow: 0px -2px 4px gray;
     bottom: 0;
-    position: absolute;
+    position: fixed;
     width: 100%;
 `
 
